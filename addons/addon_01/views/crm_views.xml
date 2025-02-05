@@ -1,0 +1,37 @@
+<odoo>
+    <record id="ke_thua_va_sua" model="ir.ui.view">
+        <field name="name">crm.lead.form.cua.toi</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="thong_tin_them" />
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_case_kanban_view_leads" model="ir.ui.view">
+        <field name="name">crm.lead.kanban.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='o_kanban_record_subtitle']" position="after">
+                <field name="thong_tin_them" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_tree_view_oppor" model="ir.ui.view">
+        <field name="name">crm.lead.tree.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <!-- <field name="team_id" position="before">
+                <field name="thong_tin_them" />
+            </field> -->
+            <field name="email_from" position="after">
+                <field name="thong_tin_them" />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+    <tempalte id="sua_layout_cua_pdf" name="sua lai layout file pdf"
+        inherit_id="sale.report_saleorder_document">
+        <xpath expr="//h2[@class='mt-4]" position="replace">
+            <h2 class="mt-4 ma-don-hang">
+                <center>
+                    <span>
+
+                    </span>
+                </center>
+            </h2>
+        </xpath>
+        <xpath expr="//div[@class='page']" position="before">
+            <style>
+                .ma-don-hang > center > span{
+                color:red !important;
+                }
+            </style>
+        </xpath>
+    </tempalte>
+    <tempalte id="tempalte_pdf_moi" name="Tên template mới">
+        <t t-call="web.html_container">
+            <div class='container'>
+                <t t-foreach="docs" t-as="doc">
+                    <h1>
+                        <t t-esc="doc.name" />
+                    </h1>
+                </t>
+            </div>
+        </t>
+    </tempalte>
+
+    <report id="action_report_action_name" model="ir.actions.report">
+        <field name="name">Ten menu in file PDF</field>
+        <field name="model"></field>
+        <field name=""></field>
+    </report>
+
+
+    <record id="action_report_action_name" model="ir.actions.report">
+        <field name="name">Name in file pdf</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <!-- report_name là tên addon_id của template, report_name = report_file -->
+        <field name="report_name">addon_report.template_pdf_moi</field>
+        <field name="report_file">addon_report.template_pdf_moi</field>
+        <!-- print_report_name là tên file tải về -->
+        <field name="print_report_name">%s - là tên file PDF' % object.name</field>
+        <!-- binding_model_id là model dùng để lấy dữ liệu báo cáo. Trường hợp này là sale.order nên
+        ref sẽ là model_sale_order -->
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

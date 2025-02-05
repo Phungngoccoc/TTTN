@@ -1,0 +1,51 @@
+<odoo>
+    <template id="sua_layout_cua_pdf" name="Sửa lại layout file pdf"
+        inherit_id="sale.report_saleorder_document">
+        <xpath expr="//h2[@class='mt-4']" position="replace">
+            <h2 class="mt-4">
+                <!-- Thẻ center căn giữa mã đơn hàng -->
+                <center>
+                    <span t-if="env.context.get('proforma', False) or is_pro_forma">Hóa đơn chiếu lệ
+                        # </span>
+                    <span t-elif="doc.state in ['draft', 'sent']">Báo giá # </span>
+                    <span t-else="">Đơn hàng # </span>
+                    <span t-field="doc.name">500008</span>
+                </center>
+            </h2>
+        </xpath>
+        <!-- Làm tương tự với các phần khác của file pdf theo template -->
+        <!-- Cũng có thể thêm trực tiếp thẻ style vào để thêm CSS hoặc thẻ script để xử lý -->
+        <xpath expr="//div[@class='page']" position="before">
+            <style>
+                .ma-don-hang > center > span{
+                color:red !important;
+                }
+            </style>
+        </xpath>
+    </template>
+
+    <template id="template_pdf_moi" name="Tên template mới">
+        <t t-call="web.html_container">
+            <div class='container'>
+                <t t-foreach="docs" t-as="doc">
+                    <h1>
+                        <t t-esc="doc.name" />
+                    </h1>
+                </t>
+            </div>
+        </t>
+    </template>
+
+
+    <record id="action_report_action_name" model="ir.actions.report">
+        <field name="name">Name in file pdf</field>
+        <field name="model">sale.order</field> <!-- Thay đổi action_name thành sale.order -->
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">addon_report.template_pdf_moi</field>
+        <field name="report_file">addon_report.template_pdf_moi</field>
+        <field name="print_report_name">"%s - là tên file PDF" % object.name</field>
+        <field name="binding_model_id" ref="model_sale_order" />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
