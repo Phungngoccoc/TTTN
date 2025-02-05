@@ -20252,3 +20252,5 @@ odoo.tools.convert.ParseError: while parsing file:/d:/tttn/odoo/server/addons/ad
 2025-02-05 12:31:34,791 16136 INFO tttn werkzeug: 127.0.0.1 - - [05/Feb/2025 12:31:34] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 9 0.011 0.065
 2025-02-05 12:31:36,612 16136 INFO tttn werkzeug: 127.0.0.1 - - [05/Feb/2025 12:31:36] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.013
 2025-02-05 12:32:46,001 16136 INFO tttn werkzeug: 127.0.0.1 - - [05/Feb/2025 12:32:46] "GET /websocket?version=17.0-1 HTTP/1.1" 101 - 1 0.000 0.017
+2025-02-05 12:35:47,041 16136 INFO tttn odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2025-02-05 12:35:47,069 16136 INFO tttn odoo.addons.base.models.ir_cron: Job done: `payment: post-process transactions` (0.027s). 
