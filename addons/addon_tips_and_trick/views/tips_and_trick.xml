@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <!-- Form View for Tip -->
+        <record id="view_tip_form" model="ir.ui.view">
+            <field name="name">tip.form</field>
+            <field name="model">tip.and.trick.tip</field>
+            <field name="arch" type="xml">
+                <form string="Tip">
+                    <field name="name" />
+                    <field name="description" />
+                </form>
+            </field>
+        </record>
+        
+        <!-- Form View for Trick -->
+        <record id="view_trick_form" model="ir.ui.view">
+            <field name="name">trick.form</field>
+            <field name="model">tip.and.trick.trick</field>
+            <field name="arch" type="xml">
+                <form string="Trick">
+                    <field name="name" />
+                    <field name="description" />
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for Tip -->
+        <record id="view_tip_tree" model="ir.ui.view">
+            <field name="name">tip.tree</field>
+            <field name="model">tip.and.trick.tip</field>
+            <field name="arch" type="xml">
+                <tree string="Tips">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tree View for Trick -->
+        <record id="view_trick_tree" model="ir.ui.view">
+            <field name="name">trick.tree</field>
+            <field name="model">tip.and.trick.trick</field>
+            <field name="arch" type="xml">
+                <tree string="Tricks">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Top-level menu -->
+        <menuitem id="tip_and_trick_menu" name="Tip and Trick" sequence="10" />
+
+        <!-- Action cho Tip và Trick -->
+        <record id="action_tip_and_trick" model="ir.actions.act_window">
+            <field name="name">Tip and Trick</field>
+            <field name="res_model">tip.and.trick.tip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Action cho Tips -->
+        <record id="action_tip" model="ir.actions.act_window">
+            <field name="name">Tips</field>
+            <field name="res_model">tip.and.trick.tip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Submenu for Tips -->
+        <menuitem id="menu_tip" name="Tips" parent="tip_and_trick_menu" action="action_tip" />
+
+        <!-- Action cho Tricks -->
+        <record id="action_trick" model="ir.actions.act_window">
+            <field name="name">Tricks</field>
+            <field name="res_model">tip.and.trick.trick</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Submenu for Tricks -->
+        <menuitem id="menu_trick" name="Tricks" parent="tip_and_trick_menu" action="action_trick" />
+    </data>
+</odoo>
