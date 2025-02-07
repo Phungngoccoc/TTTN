@@ -1,11 +1,27 @@
 <odoo>
+    <!-- Thêm nút "Add Note" vào giao diện sản phẩm -->
     <record id="product_template_form_view_inherit" model="ir.ui.view">
         <field name="name">product.template.form.inherit</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <button name="%(action_product_note_wizard)d" string="Add Note" type="action" class="btn-secondary" />
+                <button name="%(action_product_note_wizard)d" string="Add Note" type="action"
+                    class="btn-secondary" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Hiển thị ghi chú dưới phần chính sách hóa đơn -->
+    <record id="product_template_form_view_inherit_note" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.note</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <field name="product_note" readonly="1" />
+                </group>
             </xpath>
         </field>
     </record>

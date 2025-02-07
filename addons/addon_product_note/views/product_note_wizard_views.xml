@@ -5,7 +5,6 @@
         <field name="arch" type="xml">
             <form string="Add Note">
                 <group>
-                    <field name="product_id" readonly="1" />
                     <field name="note" placeholder="Enter your note here..." />
                 </group>
                 <footer>
