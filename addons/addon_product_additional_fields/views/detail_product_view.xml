@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="product_details_inherit" inherit_id="website_sale.product">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <div class="mt16">
+                <h3>Thông tin chi tiết</h3>
+                <p>
+                    <b>Chất liệu:</b>
+                    <t t-esc="product.chat_lieu or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Nguồn gốc chất liệu:</b>
+                    <t t-esc="product.nguon_goc_chat_lieu or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Màu sắc:</b>
+                    <t t-esc="product.mau_sac or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Nhuộm màu tự nhiên:</b>
+                    <t t-esc="product.nhuom_mau_tu_nhien or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Họa tiết:</b>
+                    <t t-esc="product.hoa_tiet or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Ưu điểm chất liệu:</b>
+                    <t t-esc="product.uu_diem_chat_lieu or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Nhược điểm chất liệu:</b>
+                    <t t-esc="product.nhuoc_diem_chat_lieu or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>Hướng dẫn chăm sóc sản phẩm:</b>
+                    <t t-esc="product.huong_dan_cham_soc_san_pham or 'Không có thông tin'" />
+                </p>
+                <p>
+                    <b>
+                        <a t-att-href="product.link_blog_tim_hieu_them_ve_chat_lieu or '#'"
+                            target="_blank">
+                            Tìm hiểu thêm về chất liệu</a>
+                    </b>
+                </p>
+            </div>
+        </xpath>
+    </template>
+</odoo>
