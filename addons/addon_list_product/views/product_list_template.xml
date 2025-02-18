@@ -50,7 +50,7 @@
                 <!-- Danh sách sản phẩm -->
                 <div class="row">
                     <t t-foreach="products" t-as="product">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card mb-4 shadow-sm">
                                 <a t-att-href="product.website_url">
                                     <img

@@ -1,0 +1,114 @@
+<odoo>
+    <data>
+        <template id="quy_trinh_template" name="Quy Trình Hợp Tác">
+            <link rel="stylesheet" type="text/css"
+                href="addons\addon_page_quy_trinh_hop_tac\views\quy_trinh_hop_tac.css" />
+            <t t-call="website.layout">
+                <t t-set="title">Quy Trình Hợp Tác</t>
+                <div class="container quy-trinh-hop-tac mt-5">
+                    <h2 class="text-center mt-5">QUY TRÌNH HỢP TÁC</h2>
+                    <img
+                        src="/addon_page_quy_trinh_hop_tac/static/src/img/quy-trinh-hop-tac-2048x813.jpg"
+                        alt="Quy trình hợp tác" class="img-fluid mt-5" />
+                    <!-- Quy trình hợp tác -->
+                    <div>
+                        <h4>QUY TRÌNH HỢP TÁC GIA CÔNG TPBVSK, MỸ PHẨM VỚI BIGFA</h4>
+                        <p>
+                            Bạn muốn hợp
+                            tác gia công TPBVSK, mỹ phẩm với nhà máy Bigfa. Nhưng bạn không biết bắt
+                            đầu
+                            từ đâu, quy trình hợp tác như thế nào? Do đó bài viết dưới đây Bigfa sẽ
+                            giới
+                            thiệu đến bạn quy trình hợp tác gia công TPBVSK, mỹ phẩm khép kín chuyên
+                            nghiệp của chúng tôi. Quy trình gia công TPBVSK, mỹ phẩm từ bước tiếp
+                            nhận
+                            thông tin khách hàng đến khi hoàn thành của Bigfa:
+                        </p>
+                    </div>
+                    <div class="process-blocks">
+                        <!-- Bước 1 -->
+                        <div class="process-step">
+                            <div class="step-title">Bước 1: Tiếp nhận thông tin khách hàng</div>
+                            <p>Nhằm giúp khách hàng có được sản phẩm TPBVSK và mỹ phẩm hiệu quả và
+                                ưng ý nhất. Đầu tiên, Bigfa sẽ trao đổi để biết khách hàng đã có
+                                công thức và mẫu mã sản phẩm muốn sản xuất chưa. Từ đó Bigfa sẽ có
+                                phương thức tư vấn phù hợp.
+
+                                Sau khi trao đổi nếu khách hàng chưa có công thức, mẫu sản phẩm muốn
+                                làm. Bigfa sẽ tư vấn công thức, mẫu thiết kế bao bì và dạng bào chế
+                                sản phẩm cho khách hàng.
+
+                                Đối với trường hợp khách đã có sẵn công thức sản phẩm. Bigfa sẽ tiếp
+                                nhận công thức, mẫu mã bao bì, quy cách đóng gói và số lượng sản
+                                phẩm từ khách hàng. Sau đó, sẽ trao đổi chi tiết để hiểu rõ hơn mong
+                                muốn của khách hàng.
+
+                                Sau khi tiếp nhận đầy đủ thông tin về sản phẩm, Bigfa sẽ pha mẫu thử
+                                và gửi tận tay cho khách hàng. Lúc này bạn có thể kiểm tra, dùng thử
+                                và gửi lại phản hồi cho nhà máy. Như vậy Bigfa sẽ tạo ra được các
+                                sản phẩm đúng với mong muốn của khách hàng nhất.</p>
+                            <div class="arrow-down"></div>
+                        </div>
+
+                        <!-- Bước 2 -->
+                        <div class="process-step">
+                            <div class="step-title">Bước 2: Xác nhận mẫu và báo giá</div>
+                            <p>Theo quy trình gia công TPBVSK, mỹ phẩm do Bigfa xây dựng, thì sau
+                                khi xác nhận được mẫu sản phẩm khách hàng muốn sản xuất. Nhà máy
+                                Bigfa sẽ tiếp nhận các thông tin và lên file báo giá chi tiết gửi
+                                đến khách hàng. Sau khi 2 bên thống nhất, chúng ta sẽ chuyển sang
+                                bước ký hợp đồng.</p>
+                            <div class="arrow-down"></div>
+                        </div>
+
+                        <!-- Bước 3 -->
+                        <div class="process-step">
+                            <div class="step-title">Bước 3: Ký kết hợp đồng</div>
+                            <p>Sau khi tiếp nhận hợp đồng, Bigfa và khách hàng sẽ thảo luận, đàm
+                                phán các điều khoản. Sau đó hai bên thống nhất điều khoản hợp đồng.
+                                Ký kết hợp đồng khách hàng sẽ đặt cọc 50% giá trị hợp đồng và 100%
+                                số tiền công bố</p>
+                            <div class="arrow-down"></div>
+                        </div>
+
+                        <!-- Bước 4 -->
+                        <div class="process-step">
+                            <div class="step-title">Bước 4: Hoàn thiện maquette sản phẩm và tiến
+                                hành đăng ký giấy tờ pháp lý công bố sản phẩm</div>
+                            <p>Nhà máy tiến hành thiết kế maquette trong vòng 2 – 3 ngày và chỉnh
+                                sửa theo yêu cầu của khách. Dự kiến hoàn thiện trong khoảng 5 ngày.
+                                Sau khi maquette được hoàn thiện, Bigfa sẽ tiến hành đăng ký giấy tờ
+                                pháp lý công bố sản phẩm. Thủ tục công bố sản phẩm sẽ mất từ 15 – 25
+                                ngày làm việc.</p>
+                            <div class="arrow-down"></div>
+                        </div>
+
+                        <!-- Bước 5 -->
+                        <div class="process-step">
+                            <div class="step-title">Bước 5: Sản xuất và giao hàng</div>
+                            <p>Khi đã có giấy phép công bố, nhà máy Bigfa sẽ tiến hành sản xuất sản
+                                phẩm trong vòng 30-35 ngày. Sản xuất xong, sản phẩm sẽ được đội ngũ
+                                QC và QA lấy mẫu. Đưa đi kiểm nghiệm một lần nữa. Nếu sản phẩm đạt
+                                đủ tiêu chí về độ an toàn, chất lượng sản phẩm nhà máy sẽ chuyển
+                                xuống kho đóng gói. Sẵn sàng chuyển giao sản phẩm cho khách hàng khi
+                                nhận được 50% còn lại của giá trị hợp đồng
+
+                                Tất cả quy trình sản xuất đều được thiết lập đạt chuẩn theo mô hình
+                                khép kín. Hệ thống máy móc làm việc tự động từ nguyên liệu cho đến
+                                thành phẩm. Bigfa luôn có đội ngũ QC, QA giàu kinh nghiệm giám sát
+                                nghiêm ngặt mọi quy trình. Do đó Nếu bạn đang tìm đơn vị gia công
+                                TPBVSK, mỹ phẩm chất lượng thì hãy liên hệ với nhà máy Bigfa nhé.
+                                Chúng tôi cam kết sẽ mang đến cho bạn những sản phẩm an toàn, hiệu
+                                quả tốt nhất thị trường.</p>
+                            <div class="arrow-down"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="/contactus" class="btn btn-primary">Liên Hệ Ngay</a>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+.process-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quy-trinh-hop-tac {
+    margin-top: 100px !important;
+}
+
+.mt-5 {
+    margin-top: 100px;
+}
+
+.process-step {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.arrow-down {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #007bff;
+}

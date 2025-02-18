@@ -9,7 +9,7 @@ class ProductController(http.Controller):
         category_id = kwargs.get('category')
         sort_order = kwargs.get('sort_order', 'asc')  # Sắp xếp mặc định: Giá tăng dần
         page = int(kwargs.get('page', 1))  # Trang mặc định: 1
-        per_page = 1  # Số sản phẩm hiển thị mỗi trang
+        per_page = 3  # Số sản phẩm hiển thị mỗi trang
 
         domain = []
 
