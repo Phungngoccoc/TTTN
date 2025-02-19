@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="profile_page" name="User Profile Page">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">Thông tin cá nhân</h2>
+                <form action="/profile/update" method="POST" enctype="multipart/form-data">
+                    <!-- CSRF Token -->
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                    <div class="row">
+                        <!-- Tên -->
+                        <div class="col-md-6 mb-3">
+                            <label for="name">Tên</label>
+                            <input type="text" name="name" class="form-control" id="name"
+                                t-att-value="profile.name or request.env.user.name" />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                t-att-value="profile.email or request.env.user.email" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Điện thoại -->
+                        <div class="col-md-6 mb-3">
+                            <label for="phone">Điện thoại</label>
+                            <input type="text" name="phone" class="form-control" id="phone"
+                                t-att-value="profile.phone" />
+                        </div>
+
+                        <!-- Ảnh đại diện -->
+                        <div class="col-md-6 mb-3">
+                            <label for="avatar">Ảnh đại diện</label>
+                            <input type="file" name="avatar" class="form-control" id="avatar" />
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <!-- Giới thiệu -->
+                        <div class="col-12 mb-3">
+                            <label for="bio">Giới thiệu</label>
+                            <textarea name="bio" class="form-control" id="bio" rows="4">
+                                <t t-esc="profile.bio" />
+                            </textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Cập nhật</button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

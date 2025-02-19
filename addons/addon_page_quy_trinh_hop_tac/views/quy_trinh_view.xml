@@ -13,7 +13,7 @@
                     <!-- Quy trình hợp tác -->
                     <div>
                         <h4>QUY TRÌNH HỢP TÁC GIA CÔNG TPBVSK, MỸ PHẨM VỚI BIGFA</h4>
-                        <p>
+                        <p style="text-align: justify;">
                             Bạn muốn hợp
                             tác gia công TPBVSK, mỹ phẩm với nhà máy Bigfa. Nhưng bạn không biết bắt
                             đầu
@@ -28,8 +28,11 @@
                     <div class="process-blocks">
                         <!-- Bước 1 -->
                         <div class="process-step">
-                            <div class="step-title">Bước 1: Tiếp nhận thông tin khách hàng</div>
-                            <p>Nhằm giúp khách hàng có được sản phẩm TPBVSK và mỹ phẩm hiệu quả và
+                            <div class="step-title">
+                                <h6>Bước 1: Tiếp nhận thông tin khách hàng</h6>
+                            </div>
+                            <p style="text-align: justify;">Nhằm giúp khách hàng có được sản phẩm TPBVSK và
+                                mỹ phẩm hiệu quả và
                                 ưng ý nhất. Đầu tiên, Bigfa sẽ trao đổi để biết khách hàng đã có
                                 công thức và mẫu mã sản phẩm muốn sản xuất chưa. Từ đó Bigfa sẽ có
                                 phương thức tư vấn phù hợp.
@@ -52,8 +55,11 @@
 
                         <!-- Bước 2 -->
                         <div class="process-step">
-                            <div class="step-title">Bước 2: Xác nhận mẫu và báo giá</div>
-                            <p>Theo quy trình gia công TPBVSK, mỹ phẩm do Bigfa xây dựng, thì sau
+                            <div class="step-title">
+                                <h6>Bước 2: Xác nhận mẫu và báo giá</h6>
+                            </div>
+                            <p style="text-align: justify;">Theo quy trình gia công TPBVSK, mỹ phẩm do Bigfa
+                                xây dựng, thì sau
                                 khi xác nhận được mẫu sản phẩm khách hàng muốn sản xuất. Nhà máy
                                 Bigfa sẽ tiếp nhận các thông tin và lên file báo giá chi tiết gửi
                                 đến khách hàng. Sau khi 2 bên thống nhất, chúng ta sẽ chuyển sang
@@ -63,8 +69,12 @@
 
                         <!-- Bước 3 -->
                         <div class="process-step">
-                            <div class="step-title">Bước 3: Ký kết hợp đồng</div>
-                            <p>Sau khi tiếp nhận hợp đồng, Bigfa và khách hàng sẽ thảo luận, đàm
+                            <div class="step-title">
+                                <h6>
+                                    Bước 3: Ký kết hợp đồng</h6>
+                            </div>
+                            <p style="text-align: justify;">Sau khi tiếp nhận hợp đồng, Bigfa và khách hàng
+                                sẽ thảo luận, đàm
                                 phán các điều khoản. Sau đó hai bên thống nhất điều khoản hợp đồng.
                                 Ký kết hợp đồng khách hàng sẽ đặt cọc 50% giá trị hợp đồng và 100%
                                 số tiền công bố</p>
@@ -73,9 +83,12 @@
 
                         <!-- Bước 4 -->
                         <div class="process-step">
-                            <div class="step-title">Bước 4: Hoàn thiện maquette sản phẩm và tiến
-                                hành đăng ký giấy tờ pháp lý công bố sản phẩm</div>
-                            <p>Nhà máy tiến hành thiết kế maquette trong vòng 2 – 3 ngày và chỉnh
+                            <div class="step-title">
+                                <h6>Bước 4: Hoàn thiện maquette sản phẩm và tiến
+                                    hành đăng ký giấy tờ pháp lý công bố sản phẩm</h6>
+                            </div>
+                            <p style="text-align: justify;">Nhà máy tiến hành thiết kế maquette trong vòng 2
+                                – 3 ngày và chỉnh
                                 sửa theo yêu cầu của khách. Dự kiến hoàn thiện trong khoảng 5 ngày.
                                 Sau khi maquette được hoàn thiện, Bigfa sẽ tiến hành đăng ký giấy tờ
                                 pháp lý công bố sản phẩm. Thủ tục công bố sản phẩm sẽ mất từ 15 – 25
@@ -85,8 +98,12 @@
 
                         <!-- Bước 5 -->
                         <div class="process-step">
-                            <div class="step-title">Bước 5: Sản xuất và giao hàng</div>
-                            <p>Khi đã có giấy phép công bố, nhà máy Bigfa sẽ tiến hành sản xuất sản
+                            <div class="step-title">
+                                <h6>
+                                    Bước 5: Sản xuất và giao hàng</h6>
+                            </div>
+                            <p style="text-align: justify;">Khi đã có giấy phép công bố, nhà máy Bigfa sẽ
+                                tiến hành sản xuất sản
                                 phẩm trong vòng 30-35 ngày. Sản xuất xong, sản phẩm sẽ được đội ngũ
                                 QC và QA lấy mẫu. Đưa đi kiểm nghiệm một lần nữa. Nếu sản phẩm đạt
                                 đủ tiêu chí về độ an toàn, chất lượng sản phẩm nhà máy sẽ chuyển

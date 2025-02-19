@@ -1,118 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="product_list_template" name="Product List">
+    <template id="voucher_page" name="Voucher List Page">
         <t t-call="website.layout">
             <div class="container">
-                <h2 class="text-center mt-4">Danh Sách Voucher</h2>
-
-                <!-- Thanh tìm kiếm -->
-                <form class="mb-4" method="get">
-                    <div class="input-group">
-                        <input type="text" name="search" class="form-control"
-                            placeholder="Tìm kiếm sản phẩm..."
-                            t-att-value="request.params.get('search', '')" />
-                        <button class="btn btn-primary" type="submit">Tìm kiếm</button>
-                    </div>
-                </form>
-
-                <!-- Bộ lọc danh mục + Sắp xếp -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <form method="get">
-                            <select name="category" class="form-select"
-                                onchange="this.form.submit()">
-                                <option value="">Tất cả danh mục</option>
-                                <t t-foreach="categories" t-as="category">
-                                    <option t-att-value="category.id" t-esc="category.name"
-                                        t-att-selected="request.params.get('category') == str(category.id)" />
-                                </t>
-                            </select>
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <form method="get">
-                            <input type="hidden" name="search"
-                                t-att-value="request.params.get('search', '')" />
-                            <input type="hidden" name="category"
-                                t-att-value="request.params.get('category', '')" />
-                            <select name="sort_order" class="form-select"
-                                onchange="this.form.submit()">
-                                <option value="asc"
-                                    t-att-selected="request.params.get('sort_order') == 'asc'">Giá
-                                    thấp đến cao</option>
-                                <option value="desc"
-                                    t-att-selected="request.params.get('sort_order') == 'desc'">Giá
-                                    cao đến thấp</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Danh sách sản phẩm -->
+                <h2 class="text-center my-4">Danh sách Phiếu Quà Tặng</h2>
                 <div class="row">
-                    <t t-foreach="products" t-as="product">
-                        <div class="col-md-3">
-                            <div class="card mb-4 shadow-sm">
-                                <a t-att-href="product.website_url">
-                                    <img
-                                        t-att-src="'/web/image/product.template/%d/image_1024' % product.id"
-                                        class="card-img-top" />
-                                </a>
-                                <div class="card-body">
+                    <t t-foreach="vouchers" t-as="voucher">
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">
-                                        <a t-att-href="product.website_url" t-esc="product.name" />
+                                        <b>Mã: <t t-esc="voucher.code" /></b>
                                     </h5>
-                                    <p class="card-text"> Giá: <t t-esc="product.list_price" /> đ </p>
-                                    <div class="d-flex justify-content-between">
-                                        <!-- Nút xem chi tiết -->
-                                        <a t-att-href="product.website_url" class="btn btn-info">Xem
-                                            chi tiết</a>
-                                        <!-- Nút thêm vào giỏ hàng -->
-                                        <form method="post" t-att-action="'/shop/cart/update'">
-                                            <input type="hidden" name="product_id"
-                                                t-att-value="product.id" />
-                                            <input type="hidden" name="add_qty" value="1" />
-                                            <button type="submit" class="btn btn-success">Thêm vào
-                                                giỏ</button>
-                                        </form>
-                                    </div>
+                                    <p class="card-text">Giá trị: <b><t t-esc="voucher.amount" />
+                                        VNĐ</b></p>
+                                    <p class="text-muted">Hết hạn: <t
+                                            t-esc="voucher.expiration_date" /></p>
+                                    <button class="btn btn-primary copy-code"
+                                        t-att-data-code="voucher.code">
+                                        Lưu mã giảm giá
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </t>
                 </div>
-
-                <!-- Phân trang -->
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        <!-- Nút Trước -->
-                        <li class="page-item" t-if="(page or 1) &gt; 1">
-                            <a class="page-link"
-                                t-att-href="'?search=%s&amp;category=%s&amp;sort_order=%s&amp;page=%d' % (search_query, category_id or '', sort_order, (page or 1)-1)">
-                                Trước
-                            </a>
-                        </li>
-
-                        <!-- Danh sách số trang -->
-                        <t t-foreach="range(1, (total_pages or 1) + 1)" t-as="p">
-                            <li class="page-item" t-att-class="'active' if p == (page or 1) else ''">
-                                <a class="page-link"
-                                    t-att-href="'?search=%s&amp;category=%s&amp;sort_order=%s&amp;page=%d' % (search_query, category_id or '', sort_order, p)">
-                                    <t t-esc="p" />
-                                </a>
-                            </li>
-                        </t>
-
-                        <!-- Nút Tiếp -->
-                        <li class="page-item" t-if="(page or 1) &lt; (total_pages or 1)">
-                            <a class="page-link"
-                                t-att-href="'?search=%s&amp;category=%s&amp;sort_order=%s&amp;page=%d' % (search_query, category_id or '', sort_order, (page or 1)+1)">
-                                Tiếp
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
             </div>
+
+            <!-- Thêm JavaScript để copy mã giảm giá -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                document.querySelectorAll(".copy-code").forEach(button => {
+                button.addEventListener("click", function () {
+                const code = this.getAttribute("data-code");
+                navigator.clipboard.writeText(code).then(() => {
+                alert("Đã lưu mã giảm giá: " + code);
+                });
+                });
+                });
+                });
+            </script>
         </t>
     </template>
 </odoo>
