@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_custom_snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <t t-call="website.snippet" t-snippet-name="Custom Snippet"
+                t-thumbnail="/custom_snippet/static/description/icon.png"
+                t-js-class="addon_test.s_custom_snippet"
+                t-template="addon_test.s_custom_snippet" />
+        </xpath>
+    </template>
+</odoo>

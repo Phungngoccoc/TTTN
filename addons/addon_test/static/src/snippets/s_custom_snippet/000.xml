@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t t-name="custom_snippet.s_custom_snippet" class="o_snippet">
+    <section class="s_custom_snippet">
+        <div class="container">
+            <h2 class="text-center">Custom Snippet</h2>
+            <p class="text-center">Đây là một snippet tùy chỉnh</p>
+        </div>
+    </section>
+</t>

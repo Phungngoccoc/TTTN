@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_custom_snippet_options" name="Custom Snippet Options">
+        <div class="o_we_custom_snippet_options">
+            <we-button data-attribute="custom_text" data-editor-command="text" icon="fa-font"/>
+        </div>
+    </template>
+</odoo>

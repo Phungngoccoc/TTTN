@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="custom_snippet_options">
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <div class="snippet-option" data-select-class="o_we_snippet_custom">
+                <label>Tuỳ chỉnh Snippet</label>
+            </div>
+        </xpath>
+    </template>
+</odoo>

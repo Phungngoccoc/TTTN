@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="s_custom_snippet" name="Custom Snippet">
+        <section class="s_custom_snippet" contenteditable="false">
+            <div class="container">
+                <h2 class="text-center">Welcome to Custom Snippet</h2>
+                <p>This is a customizable snippet for your website.</p>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_custom_snippet_thumbnail" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <t t-call="website.snippet">
+                <t t-set="snippet_name">Custom Snippet</t>
+                <t t-set="snippet_thumbnail">
+                    /custom_snippet/static/src/snippets/s_custom_snippet/thumbnail.png</t>
+                <t t-set="snippet_class">s_custom_snippet</t>
+                <t t-set="snippet_template">custom_snippet.s_custom_snippet</t>
+            </t>
+        </xpath>
+    </template>
+</odoo>
