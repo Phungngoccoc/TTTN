@@ -8,6 +8,12 @@
     'data': [
         'views/voucher_list_template.xml',
     ],
+    'assets': {
+    'web.assets_frontend': [
+        'addon_list_voucher/static/src/scss/style.scss',
+        'addon_list_voucher/static/src/img/logo.webp',  
+    ],
+    },
     'installable': True,
     'application': True,
 }

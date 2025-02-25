@@ -6,20 +6,34 @@
                 <h2 class="text-center my-4">Danh sách Phiếu Quà Tặng</h2>
                 <div class="row">
                     <t t-foreach="vouchers" t-as="voucher">
-                        <div class="col-md-4 mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">
-                                        <b>Mã: <t t-esc="voucher.code" /></b>
-                                    </h5>
-                                    <p class="card-text">Giá trị: <b><t t-esc="voucher.amount" />
-                                        VNĐ</b></p>
-                                    <p class="text-muted">Hết hạn: <t
-                                            t-esc="voucher.expiration_date" /></p>
-                                    <button class="btn btn-primary copy-code"
-                                        t-att-data-code="voucher.code">
-                                        Lưu mã giảm giá
-                                    </button>
+                        <div class="col-md-6 col-12 mb-4 row">
+                            <div class="col-4">
+                                <img
+                                    src="/addon_list_voucher/static/src/img/logo.webp"
+                                    alt="Quy trình hợp tác"
+                                    class="img-fluid test-img" />
+                            </div>
+                            <div class="col-8">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">
+                                            <b>Mã: <t t-esc="voucher.code" /></b>
+                                        </h5>
+                                        <p class="card-text">Giá trị: <b><t t-esc="voucher.amount" />
+                                            VNĐ</b></p>
+                                        <p class="text-muted">Hết hạn: <t
+                                                t-esc="voucher.expiration_date" /></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-primary copy-code"
+                                            t-att-data-code="voucher.code">
+                                            Lưu mã giảm giá
+                                        </button>
+                                        <button class="btn btn-primary copy-code"
+                                            t-att-data-code="voucher.code">
+                                            Lưu mã giảm giá
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
