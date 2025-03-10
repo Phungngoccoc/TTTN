@@ -1,0 +1,33 @@
+.btn-success {
+    background-color: #E1EBD7 !important;
+    border: none !important;
+    color: #2D1500 !important;
+}
+
+.badge {
+    color: white !important;
+}
+
+.text-bg-primary {
+    background-color: aquamarine !important;
+}
+
+.btn-outline-primary {
+    color: #2D1500 !important;
+    border-color: #2D1500 !important;
+}
+
+#wrapwrap {
+    &:not(.o_header_overlay) {
+        header {
+            .badge {
+                color: white !important;
+                background-color: #ccc !important;
+            }
+        }
+    }
+}
+
+aa {
+    color: #000
+}

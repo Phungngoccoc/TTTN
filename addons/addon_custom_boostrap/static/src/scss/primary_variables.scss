@@ -1,0 +1,14 @@
+// Đảm bảo biến $o-color-palettes tồn tại trước khi merge
+$o-color-palettes: () !default;
+
+$o-color-palettes: map-merge($o-color-palettes,
+   (
+      'airproof': (
+         'o-color-1': #bedb39,
+         'o-color-2': #2c3e50,
+         'o-color-3': #f2f2f2,
+         'o-color-4': #ffffff,
+         'o-color-5': #000000
+      )
+   )
+);
