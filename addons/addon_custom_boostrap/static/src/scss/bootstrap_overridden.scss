@@ -5,7 +5,7 @@
 }
 
 .badge {
-    color: white !important;
+    color: #2D1500 !important;
 }
 
 .text-bg-primary {
@@ -21,13 +21,20 @@
     &:not(.o_header_overlay) {
         header {
             .badge {
-                color: white !important;
+                color: #2D1500 !important;
                 background-color: #2D1500 !important;
             }
         }
     }
 }
 
+.s_color_blocks_2.o_half_screen_height> :first-child>.row {
+    min-height: fit-content !important;
+}
+
+
 aa {
     color: #000
+    l
 }
+

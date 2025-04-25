@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_water_customer,access.water.customer,model_water_customer,base.group_user,1,1,1,1
+access_water_meter,access.water.meter,model_water_meter,base.group_user,1,1,1,1
+access_water_invoice,access.water.invoice,model_water_invoice,base.group_user,1,1,1,1
+access_water_route,access.water.route,model_water_route,base.group_user,1,1,1,1

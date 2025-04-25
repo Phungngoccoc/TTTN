@@ -1,0 +1,24 @@
+{
+    'name': 'Waterworks Management',
+    'version': '1.0',
+    'summary': 'Quản lý cấp nước - khách hàng, đồng hồ, chỉ số, hóa đơn, IoT',
+    'category': 'Utilities',
+    'author': 'Thầy Elon Wusk',
+    'depends': ['base', 'mail'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/customer_views.xml',
+        'views/meter_views.xml',
+        'views/consumption_views.xml',
+        'views/invoice_views.xml',
+        'views/route_views.xml',
+        'views/zone_views.xml',
+        'views/ocr_views.xml',
+        'views/report_views.xml',
+        'views/menu.xml',
+        'data/sample_customer.xml',
+        'data/email_template_invoice.xml'
+    ],
+    'installable': True,
+    'application': True,
+}
