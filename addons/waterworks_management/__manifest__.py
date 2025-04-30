@@ -16,6 +16,7 @@
         'views/ocr_views.xml',
         'views/report_views.xml',
         'views/menu.xml',
+        'views/mail_template.xml',
         'data/sample_customer.xml',
         'data/email_template_invoice.xml'
     ],

@@ -1,3 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <!-- Biểu đồ Bar Chart -->
+    <record id="view_report_water_summary_graph" model="ir.ui.view">
+        <field name="name">report.water.summary.graph</field>
+        <field name="model">report.water.summary</field>
+        <field name="arch" type="xml">
+            <graph string="Tổng hợp ghi chỉ số theo khu vực" type="bar">
+                <field name="zone" type="row" />
+                <field name="read_status" type="col" />
+                <field name="total" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <!-- Nếu muốn biểu đồ hình tròn (Pie Chart), thêm view này -->
+    <record id="view_report_water_summary_pie" model="ir.ui.view">
+        <field name="name">report.water.summary.pie</field>
+        <field name="model">report.water.summary</field>
+        <field name="arch" type="xml">
+            <graph string="Biểu đồ hình tròn trạng thái đọc" type="pie">
+                <field name="read_status" type="row" />
+                <field name="total" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <!-- Action để mở biểu đồ -->
+    <record id="action_report_water_summary" model="ir.actions.act_window">
+        <field name="name">Tổng hợp chỉ số nước</field>
+        <field name="res_model">water.customer</field>
+        <field name="view_mode">graph</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Không có dữ liệu để hiển thị.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu để mở action -->
+
+    <menuitem id="menu_dashboard" name="Dashboard"
+        parent="menu_cap_nuoc_root"
+        action="action_report_water_summary" />
 </odoo>

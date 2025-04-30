@@ -37,12 +37,50 @@
         </field>
     </record>
 
+    <!-- Kanban view cho Khách hàng -->
+    <record id="view_water_customer_kanban" model="ir.ui.view">
+        <field name="name">water.customer.kanban</field>
+        <field name="model">water.customer</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name" />
+                <field name="status" />
+                <field name="phone" />
+                <field name="customer_type" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_content">
+                            <div class="oe_kanban_details">
+                                <strong>
+                                    <field name="name" />
+                                </strong>
+                                <div>
+                                    <field name="phone" />
+                                </div>
+                                <div>
+                                    <field name="customer_type" />
+                                </div>
+                                <div>
+                                    <field name="status" />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
     <!-- Action cho Khách hàng -->
     <record id="action_khach_hang" model="ir.actions.act_window">
         <field name="name">Khách hàng</field>
         <field name="res_model">water.customer</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,kanban,form</field>
         <field name="view_id" ref="view_water_customer_tree" />
     </record>
-    
+
+    <!-- Menu con cho Khách hàng -->
+    <menuitem id="menu_khach_hang" name="Khách hàng"
+        parent="menu_cap_nuoc_root"
+        action="action_khach_hang" />
 </odoo>

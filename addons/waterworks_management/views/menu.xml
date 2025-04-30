@@ -1,39 +1,5 @@
 <odoo>
     <!-- Menu Gốc -->
     <menuitem id="menu_cap_nuoc_root" name="Cấp Nước" sequence="1" />
-
-    <!-- Action cho menu Khách hàng -->
-    <record id="action_khach_hang" model="ir.actions.act_window">
-        <field name="name">Khách hàng</field>
-        <field name="res_model">water.customer</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- Menu con -->
-    <menuitem id="menu_khach_hang" name="Khách hàng" parent="menu_cap_nuoc_root"
-        action="waterworks_management.action_khach_hang" />
-
-    <!-- Action cho menu Đồng hồ nước -->
-    <record id="action_dong_ho" model="ir.actions.act_window">
-        <field name="name">Đồng hồ nước</field>
-        <field name="res_model">water.meter</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- Menu con -->
-    <menuitem id="menu_dong_ho" name="Đồng hồ nước" parent="menu_cap_nuoc_root"
-        action="waterworks_management.action_dong_ho" />
-
-    <!-- Action cho menu Hóa đơn -->
-    <record id="action_hoa_don" model="ir.actions.act_window">
-        <field name="name">Hóa đơn nước</field>
-        <field name="res_model">water.invoice</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- Menu con -->
-    <menuitem id="menu_hoa_don" name="Hóa đơn" parent="menu_cap_nuoc_root"
-        action="waterworks_management.action_hoa_don" />
-
     <menuitem id="menu_dashboard" name="Dashboard" parent="menu_cap_nuoc_root" />
 </odoo>

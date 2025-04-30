@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Email template cho Hóa đơn nước -->
+    <record id="email_template_invoice" model="mail.template">
+        <field name="name">Hóa đơn nước</field>
+        <field name="email_from">no-reply@yourcompany.com</field>
+        <field name="subject">Hóa đơn nước tháng ${object.date}</field>
+        <field name="body_html">
+            <![CDATA[
+                <p>Chào ${object.customer_id.name},</p>
+                <p>Chúng tôi gửi bạn hóa đơn nước tháng ${object.date}.</p>
+                <p>Số tiền: ${object.amount} VND</p>
+                <p>Trạng thái: ${object.state}</p>
+                <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
+            ]]>
+        </field>
+        <field name="model_id" ref="model_water_invoice" />
+    </record>
+</odoo>
